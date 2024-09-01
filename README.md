@@ -25,9 +25,8 @@ This repository is for SeamlessHr Assessment
 
 ## Running Tests
 
-### Run tests in interactive mode:
+### Run tests in interactive mode/Headless Mode:
 
 ```bash
 npx cypress open
-### Run tests in Headless mode
 npx cypress run 
