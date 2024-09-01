@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-01T04:07:57.542Z",
+    "end": "2024-09-01T04:08:02.980Z",
+    "duration": 5438,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a0d633d6-8620-4d87-ae72-87a6dc0d1ab3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\RequestLoans.cy.js",
+      "file": "cypress\\e2e\\RequestLoans.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dfdc9bb0-9e01-4159-a792-8a1f32cb5656",
+          "title": "Validate for Account Opening",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should be able to request for Loans",
+              "fullTitle": "Validate for Account Opening Should be able to request for Loans",
+              "timedOut": null,
+              "duration": 5327,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/'); //visit the url\ncy.get(\"input[name='username']\").type(validUsername);\ncy.get(\"[name='password']\").type(validPassword);\ncy.get('input[type=\"submit\"]').click();\ncy.get('#leftPanel > ul > :nth-child(7) > a').click();\ncy.get('#amount').type(5000).should('be.visible');\ncy.get('#downPayment').type(2000).should('be.visible');\ncy.get('#fromAccountId').select(1).should('be.visible');\ncy.get('input[type=\"button\"]').click();\ncy.get('body').should('include.text', \"Loan Request Processed\").and('be.visible');",
+              "err": {},
+              "uuid": "9407432e-b779-4e59-8af6-2fa5a9b5de41",
+              "parentUUID": "dfdc9bb0-9e01-4159-a792-8a1f32cb5656",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9407432e-b779-4e59-8af6-2fa5a9b5de41"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5327,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

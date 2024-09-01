@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-01T04:07:36.791Z",
+    "end": "2024-09-01T04:07:42.403Z",
+    "duration": 5612,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "53ab2b8e-66c7-462f-b3b5-8e5a761d95a8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\OpenAnAccount.cy.js",
+      "file": "cypress\\e2e\\OpenAnAccount.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "953f3f2b-5ea7-470e-acf8-ab99ff760e13",
+          "title": "Validate for Account Opening",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should be able to open an account",
+              "fullTitle": "Validate for Account Opening Should be able to open an account",
+              "timedOut": null,
+              "duration": 5520,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/'); //visit the url\ncy.get(\"input[name='username']\").type(validUsername);\ncy.get(\"[name='password']\").type(validPassword);\ncy.get('input[type=\"submit\"]').click();\ncy.get('#leftPanel > ul > :nth-child(1) > a').click();\ncy.get('#type').select(1).and('be.visible');\ncy.get('#fromAccountId').select(0).and('be.visible');\ncy.get('input[type=\"button\"]').click();\ncy.get('body').should('include.text', \"Account Opened!\").and('be.visible');",
+              "err": {},
+              "uuid": "2ffe8619-e580-4ff4-828f-a8bf8a642c17",
+              "parentUUID": "953f3f2b-5ea7-470e-acf8-ab99ff760e13",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2ffe8619-e580-4ff4-828f-a8bf8a642c17"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5520,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
